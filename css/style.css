@@ -1,0 +1,123 @@
+html {
+  box-sizing: border-box;
+  font-size: 13px;
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+body {
+  font-family: Manrope, arial, monospace, sans-serif;
+  background-color: #9eafc2;
+}
+img {
+  max-width: 100%;
+}
+.wrapper {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+.card {
+  background-color: #ecf2f8;
+  border-radius: 1em;
+  overflow: hidden;
+  margin: 2em;
+}
+.card__img {
+  width: 100%;
+  height: 250px;
+}
+.card__content {
+  padding: 2.5em;
+}
+.card__title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #48556a;
+  line-height: 1.25em;
+}
+.card__desc {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 1em;
+  color: #6d7f97;
+  line-height: 1.5em;
+}
+.card__profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2em;
+}
+.card__avatar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__avatar__img {
+  border-radius: 50%;
+  width: 45px;
+}
+.card__avatar__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 40px;
+  margin-left: 1em;
+}
+.card__avatar__info h3:last-child {
+  opacity: 50%;
+}
+.card__share {
+  padding: 1em 0.8em;
+  width: 40px;
+  background-color: #9eafc2;
+  border-radius: 50%;
+}
+@media screen and (min-width: 700px) {
+  .card {
+    margin: 0 10em;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .card {
+    margin: 0 20em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(350px, 1fr);
+  }
+  .card__img {
+    grid-column: 1/3;
+    height: 100%;
+  }
+  .card__content {
+    grid-column: 3/-1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card__title {
+    font-size: 1.85rem;
+  }
+  .card__desc {
+    font-size: 1.5rem;
+  }
+  .card__avatar__img {
+    width: 50px;
+  }
+  .card__avatar__info {
+    font-size: 1.25rem;
+  }
+  .card__share {
+    width: 45px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
